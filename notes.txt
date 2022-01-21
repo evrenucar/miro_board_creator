@@ -1,0 +1,8 @@
+Temp mail API
+https://temp-mail.us/en/api/
+
+Selenium (Web automation Library for Python)
+https://www.selenium.dev/documentation/
+
+How to open a new miro paga
+https://evrenucar.notion.site/How-to-open-infinite-Miro-boards-51dc9956257e4ce8a0e911064fb31d19
