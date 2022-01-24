@@ -5,4 +5,13 @@ Miro free version is limited to only one team that belongs to you. And every boa
 
 This tool when complete will enable you to create a board whenever you desire. And as you will have seperate teams access will be restricted to people who only have the team join link.
 
+Use Instructions
+-pip install selenium
+## -choco install chromedriver
+-pip install webdriver_manager
+## -install chrome web drivers https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/ 
+    ## install for python
+
+
+
 ![image](https://user-images.githubusercontent.com/34896403/150540137-e2e6c849-5294-4168-bb27-37eaa4cddf2e.png)
