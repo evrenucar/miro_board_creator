@@ -12,11 +12,18 @@ driver = webdriver.Chrome(PATH)
 driver.get("https://miro.com/login/")
     
 print("loaded" + " " + (driver.title))
-email = driver.find_element_by_name("email")
-email.send_keys("test")
-email.send_keys(Keys.TAB)
-time.sleep(3)
+email_field = driver.find_element_by_name("email")
+email_field.send_keys(email_adress)
+email_field.send_keys(Keys.TAB)
+
+password_field = driver.find_element_by_name("password")
+password_field.send_keys(password) 
+password_field.send_keys(Keys.TAB)
+password_field.send_keys(Keys.TAB)
+driver.findElement(By.tagName("body")).sendKeys(Keys.TAB)
+time.sleep(8)
 # email = driver.find_element_by_name("email")
 # email.send_keys("evrenucar1999@gmail.com")
 
 driver.quit()
+
