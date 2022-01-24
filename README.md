@@ -5,8 +5,17 @@ Miro free version is limited to only one team that belongs to you. And every boa
 
 This tool when complete will enable you to create a board whenever you desire. And as you will have seperate teams access will be restricted to people who only have the team join link.
 
-Use Instructions
+Selenium Documentation:https://www.selenium.dev/documentation/
+
+__Use Instructions
 -pip install selenium
+-Download chrome webdrivers https://sites.google.com/chromium.org/driver/
+-Extract and place application to C:\Program Files (x86)
+-You can point at it in the script <!--PATH = "C:\Program Files (x86)\chromedriver.exe" -->
+
+-pip install temp-mail
+-
+
 ## -choco install chromedriver
 -pip install webdriver_manager
 ## -install chrome web drivers https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/ 
