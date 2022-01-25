@@ -8,28 +8,14 @@ import re
 import os
 
 temp_mail_adress = " " 
+one= (1)
 
 API = 'https://www.1secmail.com/api/v1/'
-domainList = ['1secmail.com', '1secmail.net', '1secmail.org']
+domainList = ['xojxe.com', 'yoggm.com', 'wwjmp.com', 'oosln.com', 'vddaz.com'] #exluded '1secmail.net', '1secmail.org', 'esiix.com'
 domain = random.choice(domainList)
 
 
-try:
-    if():
-        newMail = f"{API}?login={generateUserName()}&domain={domain}"
-        reqMail = requests.get(newMail)
-        mail = f"{extract()[0]}@{extract()[1]}"
-        pyperclip.copy(mail)
-        print("\nYour temporary email is " + mail + " (Email address copied to clipboard.)" + "\n")
-        print(f"---------------------------- | Inbox of {mail} | ----------------------------\n")
-        while True: #what does this check for? (it runs until there is a break statement)
-            checkMails()
-            time.sleep(3)
 
-except(KeyboardInterrupt):
-    deleteMail()
-    print("\nProgramme Interrupted")
-    os.system('cls' if os.name == 'nt' else 'clear')
 
 def generateUserName():
     name = string.ascii_lowercase + string.digits
@@ -100,3 +86,18 @@ def checkMails():
             with open(mail_file_path,'w') as file:
                 file.write("Sender: " + sender + '\n' + "To: " + mail + '\n' + "Subject: " + subject + '\n' + "Date: " + date + '\n' + "Content: " + content + '\n')
     
+try:
+    if(one==1):
+        newMail = f"{API}?login={generateUserName()}&domain={domain}"
+        reqMail = requests.get(newMail)
+        mail = f"{extract()[0]}@{extract()[1]}"
+        pyperclip.copy(mail)
+        print("\nYour temporary email is " + mail + " (Email address copied to clipboard.)" + "\n")
+        print(f"---------------------------- | Inbox of {mail} | ----------------------------\n")
+        while True: #what does this check for? (it runs until there is a break statement)
+            checkMails()
+            time.sleep(3)
+except(KeyboardInterrupt):
+    deleteMail()
+    print("\nProgramme Interrupted")
+    os.system('cls' if os.name == 'nt' else 'clear')
