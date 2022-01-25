@@ -5,6 +5,11 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys ##adds the ability to use keys such as enter and space
 import time
 
+### Random Password Generator Imports
+import random   
+import string  
+import secrets
+
 
 ### Imports for mail-api
 import pyperclip
@@ -23,7 +28,7 @@ email_adress = "Email will come here"
 username = "username will be generated randomly by generateUserName function"
 password = "Password wil be generated"
 
-confirmation_code = "0000000"
+confirmation_code = "0"
 
 email_adress = "placeholder"
 
@@ -55,6 +60,8 @@ def generateUserName():
     return username
 
 def checkMails():
+    global confirmation_code
+    print("entered check mails")
     reqLink = f'{API}?action=getMessages&login={extract()[0]}&domain={extract()[1]}'
     req = requests.get(reqLink).json()
     length = len(req)
@@ -88,59 +95,60 @@ def checkMails():
             
   
 ### mail-api executable
-try:
-    if(one==1):
-        newMail = f"{API}?login={generateUserName()}&domain={domain}"
-        reqMail = requests.get(newMail)
-        mail = f"{extract()[0]}@{extract()[1]}"
-        # pyperclip.copy(mail)
-        email_adress = mail
-        print("\nYour temporary email is " + mail + " (Email address copied to clipboard.)" + "\n")
-        print(f"---------------------------- | Inbox of {mail} | ----------------------------\n")
-        while True: #what does this check for? (it runs until there is a break statement)
-            checkMails()
-            time.sleep(3)
-except(KeyboardInterrupt):
-    #deleteMail()  is this necessary?
-    print("\nProgramme Interrupted")
-    os.system('cls' if os.name == 'nt' else 'clear')
+while True:
+    newMail = f"{API}?login={generateUserName()}&domain={domain}"
+    reqMail = requests.get(newMail)
+    email_adress = f"{extract()[0]}@{extract()[1]}"
+    # pyperclip.copy(mail)
+    print("\nYour temporary email is " + email_adress + " (Email address copied to clipboard.)" + "\n")
+    print(f"---------------------------- | Inbox of {email_adress} | ----------------------------\n")
+    
+
+    ###Random Password Generator Code  
+    num = 10 # define the length of the string  
+    # define the secrets.choice() method and pass the string.ascii_letters + string.digits as an parameters.  
+    password = ''.join(secrets.choice(string.ascii_letters + string.digits) for x in range(num))  
+    # Print the Secure string with the combination of ascii letters and digits  
+    print("Password:"+" "+password)  
+    
+    PATH = "C:\Program Files (x86)\chromedriver.exe"
+    driver = webdriver.Chrome(PATH)
+
+
+    ### Sign up to Miro
+    driver.get("https://miro.com/signup/")
+    print("loaded" + " " + (driver.title))
+
+    #Enter username
+    name_field = driver.find_element_by_name("signup[name]")
+    name_field.send_keys(username)
+
+    #Enter email_address
+    email_field = driver.find_element_by_name("signup[email]")
+    email_field.send_keys(email_adress)
+
+    #Enter password
+    password_field = driver.find_element_by_name("signup[password]")
+    password_field.send_keys(password)
+
+    driver.find_element_by_class_name("mr-checkbox-1__icon").click()
+    password_field.send_keys(Keys.RETURN)
+    while (confirmation_code=="0"): #what does this check for? (it runs until there is a break statement)
+        checkMails()
+        print(confirmation_code) 
+        time.sleep(3)
+    #Enter confirmation code
+    confirmation_code_field = driver.find_element_by_name("code")
+    confirmation_code_field.send_keys(confirmation_code[-6:])
+    confirmation_code_field.send_keys(Keys.RETURN)
+    time.sleep(3)
+    break
 
 
 #print (username)
 
 
-### Random Password Generator Code
-import random   
-import string  
-import secrets  
-num = 10 # define the length of the string  
-# define the secrets.choice() method and pass the string.ascii_letters + string.digits as an parameters.  
-password = ''.join(secrets.choice(string.ascii_letters + string.digits) for x in range(num))  
-# Print the Secure string with the combination of ascii letters and digits  
-print("Password:"+" "+password)  
- 
-PATH = "C:\Program Files (x86)\chromedriver.exe"
-driver = webdriver.Chrome(PATH)
 
-
-### Sign up to Miro
-driver.get("https://miro.com/signup/")
-print("loaded" + " " + (driver.title))
-
-#Enter username
-name_field = driver.find_element_by_name("signup[name]")
-name_field.send_keys(username)
-
-#Enter email_address
-email_field = driver.find_element_by_name("signup[email]")
-email_field.send_keys(email_adress)
-
-#Enter password
-password_field = driver.find_element_by_name("signup[password]")
-password_field.send_keys(password)
-
-driver.find_element_by_class_name("mr-checkbox-1__icon").click()
-password_field.send_keys(Keys.RETURN)
 
 
 
