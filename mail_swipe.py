@@ -13,7 +13,6 @@ one= (1)
 API = 'https://www.1secmail.com/api/v1/'
 domainList = ['yoggm.com', 'vddaz.com', 'oosln.com', 'xojxe.com' ] #exluded these as they cannot be registered with miro: '1secmail.net', '1secmail.org', 'esiix.com', 'wwjmp.com'
 domain = random.choice(domainList)
-
 # works 'yoggm.com', 'vddaz.com', 'oosln.com', 'xojxe.com'
 
 

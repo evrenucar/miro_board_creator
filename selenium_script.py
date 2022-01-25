@@ -1,16 +1,112 @@
+
+### Imports for selenium
 from turtle import down
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys ##adds the ability to use keys such as enter and space
 import time
 
 
+### Imports for mail-api
+import pyperclip
+import requests
+import random
+import string
+import time
+import sys
+import re
+import os
+
+
+
+### Defining all variables
 email_adress = "Email will come here"
-username = "username will be generated from email_adress"
+username = "username will be generated randomly by generateUserName function"
 password = "Password wil be generated"
 
-email_adress = "ful6dvfls5@oosln.com"
-username = email_adress[:8]
-print (username)
+confirmation_code = "0000000"
+
+email_adress = "placeholder"
+
+
+### Variables for mail-api
+temp_mail_adress = " " 
+one= (1)
+
+API = 'https://www.1secmail.com/api/v1/'
+domainList = ['yoggm.com', 'vddaz.com', 'oosln.com', 'xojxe.com' ] #exluded these as they cannot be registered with miro: '1secmail.net', '1secmail.org', 'esiix.com', 'wwjmp.com'
+domain = random.choice(domainList)
+
+### mail-api functions
+def extract():
+    getUserName = re.search(r'login=(.*)&',newMail).group(1)
+    getDomain = re.search(r'domain=(.*)', newMail).group(1)
+    return [getUserName, getDomain]
+# Got this from https://stackoverflow.com/a/43952192/13276219
+def print_statusline(msg: str):
+    last_msg_length = len(print_statusline.last_msg) if hasattr(print_statusline, 'last_msg') else 0
+    print(' ' * last_msg_length, end='\r')
+    print(msg, end='\r')
+    sys.stdout.flush()
+    print_statusline.last_msg = msg
+
+def generateUserName():
+    name = string.ascii_lowercase + string.digits
+    username = ''.join(random.choice(name) for i in range(10))
+    return username
+
+def checkMails():
+    reqLink = f'{API}?action=getMessages&login={extract()[0]}&domain={extract()[1]}'
+    req = requests.get(reqLink).json()
+    length = len(req)
+    if length == 0:
+        print_statusline("Your mailbox is empty. Hold tight. Mailbox is refreshed automatically every 5 seconds.")
+    else:
+        idList = []
+        for i in req:
+            for k,v in i.items():
+                if k == 'id':
+                    mailId = v
+                    idList.append(mailId)
+
+        print_statusline(f"You received mail")
+
+        for i in idList:
+            msgRead = f'{API}?action=readMessage&login={extract()[0]}&domain={extract()[1]}&id={i}'
+            req = requests.get(msgRead).json()
+            for k,v in req.items():
+                if k == 'from':
+                    sender = v
+                if k == 'subject':
+                    subject = v
+                if k == 'date':
+                    date = v
+                if k == 'textBody':
+                    content = v
+            confirmation_code = subject
+            print(confirmation_code) 
+            break
+            
+  
+### mail-api executable
+try:
+    if(one==1):
+        newMail = f"{API}?login={generateUserName()}&domain={domain}"
+        reqMail = requests.get(newMail)
+        mail = f"{extract()[0]}@{extract()[1]}"
+        # pyperclip.copy(mail)
+        email_adress = mail
+        print("\nYour temporary email is " + mail + " (Email address copied to clipboard.)" + "\n")
+        print(f"---------------------------- | Inbox of {mail} | ----------------------------\n")
+        while True: #what does this check for? (it runs until there is a break statement)
+            checkMails()
+            time.sleep(3)
+except(KeyboardInterrupt):
+    #deleteMail()  is this necessary?
+    print("\nProgramme Interrupted")
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+
+#print (username)
 
 
 ### Random Password Generator Code
@@ -26,6 +122,8 @@ print("Password:"+" "+password)
 PATH = "C:\Program Files (x86)\chromedriver.exe"
 driver = webdriver.Chrome(PATH)
 
+
+### Sign up to Miro
 driver.get("https://miro.com/signup/")
 print("loaded" + " " + (driver.title))
 
@@ -44,6 +142,9 @@ password_field.send_keys(password)
 driver.find_element_by_class_name("mr-checkbox-1__icon").click()
 password_field.send_keys(Keys.RETURN)
 
+
+
+###Log into miro with pre-determined email adress
 # driver.get("https://miro.com/login/")
     
 # print("loaded" + " " + (driver.title))
@@ -60,6 +161,8 @@ password_field.send_keys(Keys.RETURN)
 
 # # email = driver.find_element_by_name("email")
 # # email.send_keys("evrenucar1999@gmail.com")
+
+
 
 #driver.quit()
 
