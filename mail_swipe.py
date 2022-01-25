@@ -11,10 +11,10 @@ temp_mail_adress = " "
 one= (1)
 
 API = 'https://www.1secmail.com/api/v1/'
-domainList = ['xojxe.com', 'yoggm.com', 'wwjmp.com', 'oosln.com', 'vddaz.com'] #exluded '1secmail.net', '1secmail.org', 'esiix.com'
+domainList = ['yoggm.com', 'vddaz.com', 'oosln.com', 'xojxe.com' ] #exluded these as they cannot be registered with miro: '1secmail.net', '1secmail.org', 'esiix.com', 'wwjmp.com'
 domain = random.choice(domainList)
 
-
+# works 'yoggm.com', 'vddaz.com', 'oosln.com', 'xojxe.com'
 
 
 def generateUserName():
