@@ -1,8 +1,12 @@
 
 ### Imports for selenium
+from msilib.schema import Class
+from pydoc import locate
+from tokenize import Name
 from turtle import down
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys ##adds the ability to use keys such as enter and space
+from selenium.webdriver.common.action_chains import ActionChains ##adds the ability to enter keys without specifying an element
 import time
 
 ### Random Password Generator Imports
@@ -27,6 +31,7 @@ import os
 email_adress = "Email will come here"
 username = "username will be generated randomly by generateUserName function"
 password = "Password wil be generated"
+team_name = "team_x"
 
 confirmation_code = "0"
 
@@ -136,12 +141,49 @@ while True:
     while (confirmation_code=="0"): #what does this check for? (it runs until there is a break statement)
         checkMails()
         print(confirmation_code) 
-        time.sleep(3)
+    
+    print("hey  I'm here")
+    print("hey  I'm here")
+    print("hey  I'm here")
+    print("hey  I'm here")
+
+    
     #Enter confirmation code
-    confirmation_code_field = driver.find_element_by_name("code")
-    confirmation_code_field.send_keys(confirmation_code[-6:])
-    confirmation_code_field.send_keys(Keys.RETURN)
-    time.sleep(3)
+    driver.find_element_by_name("code").send_keys(confirmation_code[-6:])
+    #confirmation_code_field.send_keys(confirmation_code[-6:])
+    time.sleep(15)
+    print("hey  I've slept well")
+    print("hey  I've slept well")
+    print("hey  I've slept well")
+    teamname_field = driver.find_element_by_class_name("setup-team-slide-content__section").click()
+    time.sleep(2)
+    #driver.find_element_by_tag_name('body').send_keys('dummydata')
+    actions = ActionChains(driver)
+    actions.send_keys('dummydata')
+    actions.perform()
+    #teamname_field = driver.find_element_by_class_name("setup-team-slide-content__section").send_keys(team_name)
+    # teamname_field.click()
+    # teamname_field.send_keys(team_name)
+    # teamname_field.send_keys(Keys.RETURN)
+    
+    #<selenium.webdriver.remote.webelement.WebElement (session="193931d6637eff944f0c5f11742ad2fe", element="46869f7f-510b-4700-8580-060ceb32e098")>
+    
+    #setup-team-slide-content__section
+    
+    # #confirmation_code_field.send_keys(Keys.RETURN) This bastard was causing the problem all along ^^
+    # time.sleep(10)
+    # print("hey  I'm here")
+    # #Enter team_name
+    # team_field = driver.find_element_by_id('setupTeamSlide__teamTitleInput').click()
+    # print("this is the team field ID" + team_field) 
+    # #teamname_field =    
+    # #team_locator = driver.find
+    # #driver.find_element_by_class_name("rtb-input rtb-input--fluid setup-team-slide-content__section-input").send_keys("team10239")
+    # # teamname_field.send_keys(Keys.RETURN)
+    # time.sleep(1)
+
+    
+
     break
 
 
