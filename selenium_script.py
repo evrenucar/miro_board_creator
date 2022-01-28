@@ -24,7 +24,7 @@ import time
 import sys
 import re
 import os
-
+import tkinter as tk #used for getting clipboard 
 
 
 ### Defining all variables
@@ -36,6 +36,8 @@ team_name = "team_x"
 confirmation_code = "0"
 
 email_adress = "placeholder"
+
+team_invite_link ="dis a link"
 
 
 ### Variables for mail-api
@@ -184,77 +186,29 @@ while True:
     actions.perform()
 
     time.sleep(4)
-    print("11000tried to click")
-    print("11000tried to click")
-    print("11000tried to click")
-    #driver.find_elements_by_tag_name("button").click()
-    print("11tried to click")
-    print("11tried to click")
-    print("11tried to click")
-    
-    #driver.find_element_by_id("share").click()
+    ### Click Share button 
     driver.find_element_by_class_name("permissionPanel-2N0Gv").click()
-    print("tried to click")
-    print("tried to click")
-    print("tried to click")
-    # what_to_do = driver.find_element_by_class_name("select-panel__container").click()
-    # actions.click()
-    # actions.perform
-    # actions.send_keys()
-    # actions.perform()
+    print("clicked Share")
+    print("clicked Share")
 
-    #teamname_field = driver.find_element_by_class_name("setup-team-slide-content__section").send_keys(team_name)
-    # teamname_field.click()
-    # teamname_field.send_keys(team_name)
-    # teamname_field.send_keys(Keys.RETURN)
-    
-    #<selenium.webdriver.remote.webelement.WebElement (session="193931d6637eff944f0c5f11742ad2fe", element="46869f7f-510b-4700-8580-060ceb32e098")>
-    
-    #setup-team-slide-content__section
-    
-    # #confirmation_code_field.send_keys(Keys.RETURN) This bastard was causing the problem all along ^^
-    # time.sleep(10)
-    # print("hey  I'm here")
-    # #Enter team_name
-    # team_field = driver.find_element_by_id('setupTeamSlide__teamTitleInput').click()
-    # print("this is the team field ID" + team_field) 
-    # #teamname_field =    
-    # #team_locator = driver.find
-    # #driver.find_element_by_class_name("rtb-input rtb-input--fluid setup-team-slide-content__section-input").send_keys("team10239")
-    # # teamname_field.send_keys(Keys.RETURN)
-    # time.sleep(1)
+    ### Copy Team Invıte Link
+    time.sleep(5)
+    driver.find_element_by_class_name("share-option__additional-content").click()
+    time.sleep(1)
 
-    
+    ### Quits the Driver
+    driver.quit()
+    print("Process Complete")
+    print("Shutting down driver")
+
+    ###  Prints Team Invite Link
+    root = tk.Tk()
+    team_invite_link = root.clipboard_get()
+    print("#####################################")
+    print("Team Invite Link copied to your clipboard"+ " " + team_invite_link)
+    print("#####################################")
 
     break
 
 
-#print (username)
-
-
-
-
-
-
-###Log into miro with pre-determined email adress
-# driver.get("https://miro.com/login/")
-    
-# print("loaded" + " " + (driver.title))
-# email_field = driver.find_element_by_name("email")
-# email_field.send_keys(email_adress)
-# email_field.send_keys(Keys.TAB)
-
-# password_field = driver.find_element_by_name("password")
-# password_field.send_keys(password) 
-# password_field.send_keys(Keys.TAB)
-# driver.find_element_by_class_name("signup__submit").click()
-
-#time.sleep(6)
-
-# # email = driver.find_element_by_name("email")
-# # email.send_keys("evrenucar1999@gmail.com")
-
-
-
-#driver.quit()
 
