@@ -21,6 +21,4 @@ __Use Instructions
 ## -install chrome web drivers https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/ 
     ## install for python
 
-
-
-![image](https://user-images.githubusercontent.com/34896403/150540137-e2e6c849-5294-4168-bb27-37eaa4cddf2e.png)
+![miro_board_generator full](https://user-images.githubusercontent.com/34896403/151537904-6623d0ca-d08c-4386-a2f1-528e4c2e6542.gif)
