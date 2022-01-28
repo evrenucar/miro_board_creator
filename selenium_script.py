@@ -127,6 +127,7 @@ while True:
     print("loaded" + " " + (driver.title))
 
     #Enter username
+    username = generateUserName()
     name_field = driver.find_element_by_name("signup[name]")
     name_field.send_keys(username)
 
