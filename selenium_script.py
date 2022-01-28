@@ -187,12 +187,13 @@ while True:
     print("11000tried to click")
     print("11000tried to click")
     print("11000tried to click")
-    driver.find_elements_by_tag_name("button").click()
+    #driver.find_elements_by_tag_name("button").click()
     print("11tried to click")
     print("11tried to click")
     print("11tried to click")
-
-    driver.find_element_by_id("share-board-button").click()
+    
+    #driver.find_element_by_id("share").click()
+    driver.find_element_by_class_name("permissionPanel-2N0Gv").click()
     print("tried to click")
     print("tried to click")
     print("tried to click")
