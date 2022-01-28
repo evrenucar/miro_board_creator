@@ -14,7 +14,6 @@ import random
 import string  
 import secrets
 
-
 ### Imports for mail-api
 import pyperclip
 import requests
@@ -26,19 +25,14 @@ import re
 import os
 import tkinter as tk #used for getting clipboard 
 
-
 ### Defining all variables
 email_adress = "Email will come here"
 username = "username will be generated randomly by generateUserName function"
 password = "Password wil be generated"
 team_name = "team_x"
-
 confirmation_code = "0"
-
 email_adress = "placeholder"
-
 team_invite_link ="dis a link"
-
 
 ### Variables for mail-api
 temp_mail_adress = " " 
