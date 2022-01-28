@@ -151,16 +151,57 @@ while True:
     #Enter confirmation code
     driver.find_element_by_name("code").send_keys(confirmation_code[-6:])
     #confirmation_code_field.send_keys(confirmation_code[-6:])
-    time.sleep(15)
+    time.sleep(10)
     print("hey  I've slept well")
     print("hey  I've slept well")
     print("hey  I've slept well")
     teamname_field = driver.find_element_by_class_name("setup-team-slide-content__section").click()
-    time.sleep(2)
     #driver.find_element_by_tag_name('body').send_keys('dummydata')
     actions = ActionChains(driver)
-    actions.send_keys('dummydata')
+    actions.send_keys(team_name)
     actions.perform()
+    actions.send_keys(Keys.RETURN)
+    actions.perform()
+
+    time.sleep(3)
+    ### Skip invite teammates
+    actions.send_keys(Keys.TAB)
+    actions.perform()
+    actions.send_keys(Keys.TAB)
+    actions.perform()
+    actions.send_keys(Keys.RETURN)
+    actions.perform()
+    
+    ### Skip this for now
+    driver.find_element_by_tag_name("a").click()
+    # //div[@id='a']// h4 a
+    print("What do you want to do")
+    print("What do you want to do")
+    
+    time.sleep(8) #could add an on load event or something here
+
+    actions.send_keys(Keys.ESCAPE)
+    actions.perform()
+
+    time.sleep(4)
+    print("11000tried to click")
+    print("11000tried to click")
+    print("11000tried to click")
+    driver.find_elements_by_tag_name("button").click()
+    print("11tried to click")
+    print("11tried to click")
+    print("11tried to click")
+
+    driver.find_element_by_id("share-board-button").click()
+    print("tried to click")
+    print("tried to click")
+    print("tried to click")
+    # what_to_do = driver.find_element_by_class_name("select-panel__container").click()
+    # actions.click()
+    # actions.perform
+    # actions.send_keys()
+    # actions.perform()
+
     #teamname_field = driver.find_element_by_class_name("setup-team-slide-content__section").send_keys(team_name)
     # teamname_field.click()
     # teamname_field.send_keys(team_name)
