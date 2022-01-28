@@ -29,7 +29,7 @@ import tkinter as tk #used for getting clipboard
 email_adress = "Email will come here"
 username = "username will be generated randomly by generateUserName function"
 password = "Password wil be generated"
-team_name = "team_x"
+team_name = "team_"
 confirmation_code = "0"
 email_adress = "placeholder"
 team_invite_link ="dis a link"
@@ -155,7 +155,7 @@ while True:
     teamname_field = driver.find_element_by_class_name("setup-team-slide-content__section").click()
     #driver.find_element_by_tag_name('body').send_keys('dummydata')
     actions = ActionChains(driver)
-    actions.send_keys(team_name)
+    actions.send_keys(team_name + username) 
     actions.perform()
     actions.send_keys(Keys.RETURN)
     actions.perform()
