@@ -4,7 +4,7 @@
 
 
 # What does it do?
-Generates a new miro board with a temp mail adress for you to use in your creative endeavors. At the end the team invite link is copied to your clipboard.
+Generates a new miro board with a temp mail adress for you to use in your creative endeavors. At the end the team invite link is copied to your clipboard. With this you can have as many Miro boards as you want!
 
 # Why do you need it?
 [Free version of miro](https://miro.com/pricing/) is limited to only one team that belongs to you. And every board you open within that team has to be shared with everyone that has been added to that team. This makes it hard to have private pages. Also the page limit within the team restricts you from opening more than 3 editable boards.
