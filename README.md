@@ -1,4 +1,4 @@
-Thans to user sameera-madushan for https://github.com/sameera-madushan/Mail-Swipe
+Thanks to user sameera-madushan for https://github.com/sameera-madushan/Mail-Swipe
 
 # miro_board_creator
 Generates a new miro board with a temp mail adress for you use
