@@ -11,7 +11,7 @@ This tool enables you to create a board whenever you desire. And as you will hav
 
 # How does it work?
 1. It generates a temporary mail adress with the help of [1secMail API](https://www.1secmail.com/api/)
-2. Registers for a new Miro account with the generated mail adress and randomized **username** and **password**. Uses [Selenium](https://www.selenium.dev/) for Web-Automation
+2. Registers for a new Miro account with the generated mail adress and randomized **username** and **password**. With [Selenium](https://www.selenium.dev/) 
 3. Receives **confimation code** and enters it.
 4. Clicks setup and does Next Next Next
 5. Copies team invite link to your clipboard with [Pyperclip](pyperclip) and terminates the process.
