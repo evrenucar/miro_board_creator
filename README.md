@@ -22,18 +22,18 @@ This tool enables you to create a board whenever you desire. And as you will hav
 
 
 # How to use it?
-### 1.Clone/Download this repository to a local directory
+### 1. Clone/Download this repository to a local directory
 `gh repo clone evrenucar/miro_board_creator`
 
-### 2.Install depencencies (Python libraries required)
+### 2. Install depencencies (Python libraries required)
 `pip install -r requirements.txt`
 
-### 3.Install Google Chrome & Webdrivers
+### 3. Install Google Chrome & Webdrivers
 -Install from official [Google Chrome Website](https://www.google.com/intl/tr_tr/chrome/)
 -Download chrome webdrivers https://sites.google.com/chromium.org/driver/
 -Extract and place application to `C:\Program Files (x86)` (If you plce it somewhere else write that directory instead of <!--PATH = "C:\Program Files (x86)\chromedriver.exe" --> at line 115 in `selenium_script.py`
 
-### 4.Run `selenium_script.py`
+### 4. Run `selenium_script.py`
 Chromedriver will go through the process of generating a new account and a new board in Miro. At the end the **team invite link** will be copied to your clipboard
 
 ### Enjoy!
