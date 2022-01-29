@@ -17,6 +17,7 @@ This tool enables you to create a board whenever you desire. And as you will hav
 3. Receives **confimation code** and enters it.
 4. Clicks setup and does Next Next Next
 5. Copies team invite link to your clipboard and terminates the process
+
 ![miro_board_generator full](https://user-images.githubusercontent.com/34896403/151537904-6623d0ca-d08c-4386-a2f1-528e4c2e6542.gif)
 
 
