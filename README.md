@@ -12,11 +12,11 @@ This tool enables you to create a board whenever you desire. And as you will hav
 
 
 ## How does it work?
-1.It generates a temporary mail adress with the help of [1secMail API](https://www.1secmail.com/api/)
-2.Registers for a new Miro account with the generated mail adress and randomized **username** and **password**
-3.Receives **confimation code** and enters it.
-4.Clicks setup and does Next Next Next
-5.Copies team invite link to your clipboard and terminates the process
+1. It generates a temporary mail adress with the help of [1secMail API](https://www.1secmail.com/api/)
+2. Registers for a new Miro account with the generated mail adress and randomized **username** and **password**
+3. Receives **confimation code** and enters it.
+4. Clicks setup and does Next Next Next
+5. Copies team invite link to your clipboard and terminates the process
 ![miro_board_generator full](https://user-images.githubusercontent.com/34896403/151537904-6623d0ca-d08c-4386-a2f1-528e4c2e6542.gif)
 
 
