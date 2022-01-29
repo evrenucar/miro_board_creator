@@ -1,4 +1,4 @@
-![infinite_miro_V2](https://user-images.githubusercontent.com/34896403/151658282-7f40a26a-57f5-4114-9c8c-b59c0b181732.gif)
+![infinite_miro_faster](https://user-images.githubusercontent.com/34896403/151658306-07350e0f-8375-4670-9432-686e6997f435.gif)
 
 
 
