@@ -1,4 +1,5 @@
-![infinite_miro](https://user-images.githubusercontent.com/34896403/151657996-44cd552f-a443-49af-9cff-d027befb27dc.gif)
+![infinite_miro_V2](https://user-images.githubusercontent.com/34896403/151658282-7f40a26a-57f5-4114-9c8c-b59c0b181732.gif)
+
 
 
 
