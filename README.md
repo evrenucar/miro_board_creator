@@ -30,7 +30,9 @@ This tool enables you to create a board whenever you desire. And as you will hav
 
 ### 3. Install Google Chrome & Webdrivers
 -Install from official [Google Chrome Website](https://www.google.com/intl/tr_tr/chrome/)
+
 -Download chrome webdrivers https://sites.google.com/chromium.org/driver/
+
 -Extract and place application to `C:\Program Files (x86)` (If you plce it somewhere else write that directory instead of <!--PATH = "C:\Program Files (x86)\chromedriver.exe" --> at line 115 in `selenium_script.py`
 
 ### 4. Run `selenium_script.py`
