@@ -50,6 +50,6 @@ Thanks to user sameera-madushan for https://github.com/sameera-madushan/Mail-Swi
 
 Selenium Documentation:https://www.selenium.dev/documentation/
 
-# Disclaimer & WARNINGS:
+# Disclaimer & Warnings:
 
 Use this ONLY for Educational Purposes! By using this code you agree that I'm not responsible for any kind of trouble caused by the code. THIS PROJECT IS NOT AFFILIATED WITH Miro.
