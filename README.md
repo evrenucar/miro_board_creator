@@ -44,8 +44,12 @@ Chromedriver will go through the process of generating a new account and a new b
 Want to build it into a web-App and host it for everyone who wants access to unlimited miro boards. 
 
 # Additional Notes
-If you have trouble with the code just [PM me]https://www.instagram.com/evren.builds/) and I'd be glad to pass a few links on to you for your personal use
+If you have trouble with the code just [PM me](https://www.instagram.com/evren.builds/) and I'd be glad to pass a few links on to you for your personal use
 
 Thanks to user sameera-madushan for https://github.com/sameera-madushan/Mail-Swipe
 
 Selenium Documentation:https://www.selenium.dev/documentation/
+
+# Disclaimer & WARNINGS:
+
+Use this ONLY for Educational Purposes! By using this code you agree that I'm not responsible for any kind of trouble caused by the code. THIS PROJECT IS NOT AFFILIATED WITH Miro.
