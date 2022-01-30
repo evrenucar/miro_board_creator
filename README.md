@@ -44,7 +44,7 @@ Chromedriver will go through the process of generating a new account and a new b
 Want to build it into a web-App and host it for everyone who wants access to unlimited miro boards. 
 
 # Additional Notes
-If you have trouble with the code just [PM me](https://www.instagram.com/evren.builds/) and I'd be glad to pass a few links on to you for your personal use
+If you have trouble with the code just [PM me](https://www.instagram.com/evren.builds/) and I'd be glad to help
 
 Thanks to user sameera-madushan for https://github.com/sameera-madushan/Mail-Swipe
 
