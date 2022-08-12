@@ -42,7 +42,7 @@ Chromedriver will go through the process of generating a new account and a new b
 ### Enjoy!
 
 # Future plans
-Want to build it into a web-App and host it for everyone who wants access to unlimited miro boards. 
+Try to build my own miro alternative with the features I need. If you have any ideas or would like to help shoot them my way.
 
 # Additional Notes
 If you have trouble with the code just [PM me](https://www.instagram.com/evren.builds/) and I'd be glad to help
